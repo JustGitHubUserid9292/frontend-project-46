@@ -5,22 +5,20 @@ import _ from 'lodash';
 import { readFileSync } from 'fs';
 
 const genDiff = (data1, data2) => {
-  let acc = {}
-  const obj1 = Object.entries(data1)
-  const obj2 = Object.entries(data2)
-  for (const list1 of obj1) {
-    for (const list2 of obj2) {
-      if (!_.has(data2, list1[0]) && !_.has(data1, list2[0]) || list1[0] === list2[0] && list1[1] !== list2[1]) {
-        acc['- ' + list1[0]] = list1[1]
-        acc['+ ' + list2[0]] = list2[1]
-      }
-      if (_.has(data1, list1[0]) && _.has(data2, list1[0]) && list1[1] === list2[1]) {
-        acc[list1[0]] = list1[1]
-      }
+  return [...Object.keys(data1), ...Object.keys(data2)].reduce((acc, key) => {
+    if (!_.has(data2, key)) {
+      acc[`- ${key}`] = data1[key];
+    } else if (!_.has(data1, key)) {
+      acc[`+ ${key}`] = data2[key];
+    } else if (_.isEqual(data1[key], data2[key])) {
+      acc[key] = data1[key];
+    } else {
+      acc[`- ${key}`] = data1[key];
+      acc[`+ ${key}`] = data2[key];
     }
-  }
-  return acc
-}
+    return acc;
+  }, {});
+};
 
 const sortData = (data) => {
 const sortedKeys = Object.keys(data).sort((a, b) => {
