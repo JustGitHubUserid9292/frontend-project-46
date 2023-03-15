@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+/* eslint no-undef: "off", curly: "error" */
+
 import { Command } from 'commander';
 
 import genDiff from '../src/genDiff.js';
