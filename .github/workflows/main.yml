@@ -18,13 +18,4 @@ jobs:
       - run: npm install
       - run: npm run test
       - run: make lint
-       # - name: Test & publish code coverage
-      #   # Publish code coverage on Code Climate
-      #   # https://github.com/paambaati/codeclimate-action
-      #   uses: paambaati/codeclimate-action@v3.0.0
-      #   # Add Code Climate secret key
-      #   env:
-      #     HEXLET_ID: ${{ secrets.HEXLET_ID }}
-      #   with:
-      #     coverageCommand: make test-coverage
-      #     debug: true
+
