@@ -45,7 +45,7 @@ const objToString = (obj) => {
 }
 diffStr += '}';
 return diffStr
-}
+};
 
 export default (filepath1, filepath2) => {
 
