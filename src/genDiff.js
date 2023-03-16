@@ -2,7 +2,7 @@
 
 import _ from 'lodash';
 
-import { readFileSync } from 'fs';
+import parser from '../src/parser.js'
 
 const genDiff = (data1, data2) => {
   return [...Object.keys(data1), ...Object.keys(data2)].reduce((acc, key) => {
@@ -49,11 +49,8 @@ return diffStr
 
 export default (filepath1, filepath2) => {
 
-const data1 = readFileSync(filepath1, 'utf-8')
-const data2 = readFileSync(filepath2, 'utf-8')
-
-const dataParse1 = JSON.parse(data1)
-const dataParse2 = JSON.parse(data2)
+const dataParse1 = parser(filepath1)
+const dataParse2 = parser(filepath2)
 
 const diff = genDiff(dataParse1, dataParse2);
 const sortDiff = sortData(diff)
