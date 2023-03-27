@@ -12,4 +12,4 @@ const parser = (file) => {
     }
 }
 
-export default parser
+export default parser;

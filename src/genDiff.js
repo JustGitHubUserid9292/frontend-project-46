@@ -4,11 +4,17 @@
 
 import parser from '../src/parser.js'
 
-import { isNested, nestedFiles, plainFiles } from '../src/logics.js'
+import { isNested, nestedFiles, plainFiles } from '../formatters/stylish.js'
 
-const genDiff = (data1, data2) => {
+import plainFormatter from '../formatters/plain.js'
+
+const genDiff = (data1, data2, formatType = 'stylish') => {
+  const diff = nestedFiles(data1, data2)
+  if (formatType === 'plain') {
+    return plainFormatter(diff)
+  }
   if (isNested(data1, data2)) {
-    return JSON.stringify(nestedFiles(data1, data2), null, 4).replace(/\"/g, "").replace(/\,/g, "")
+    return JSON.stringify(diff, null, 4).replace(/\"/g, "").replace(/\,/g, "")
   }
   return plainFiles(data1, data2)
 }
