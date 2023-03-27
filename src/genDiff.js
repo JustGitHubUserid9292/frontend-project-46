@@ -19,10 +19,10 @@ const genDiff = (data1, data2, formatType = 'stylish') => {
   return plainFiles(data1, data2)
 }
 
-export default (filepath1, filepath2) => {
+export default (filepath1, filepath2, formatType) => {
 
 const dataParse1 = parser(filepath1)
 const dataParse2 = parser(filepath2)
 
-return genDiff(dataParse1, dataParse2);
+return genDiff(dataParse1, dataParse2, formatType);
 }
