@@ -8,10 +8,15 @@ import { isNested, nestedFiles, plainFiles } from '../formatters/stylish.js'
 
 import plainFormatter from '../formatters/plain.js'
 
+import jsonFormatter from '../formatters/json.js'
+
 const genDiff = (data1, data2, formatType = 'stylish') => {
   const diff = nestedFiles(data1, data2)
   if (formatType === 'plain') {
     return plainFormatter(diff)
+  }
+  if (formatType === 'json') {
+    return jsonFormatter(diff)
   }
   if (isNested(data1, data2)) {
     return JSON.stringify(diff, null, 4).replace(/\"/g, "").replace(/\,/g, "")
