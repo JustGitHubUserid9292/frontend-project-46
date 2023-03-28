@@ -16,7 +16,7 @@ const genDiff = (data1, data2, formatType = 'stylish') => {
   if (formatType === 'json') {
     return jsonFormatter(diff)
   }
-  return JSON.stringify(diff, null, 4).replace(/\"/g, "").replace(/\,/g, "")
+  return JSON.stringify(diff, null, 3).replace(/\"/g, "").replace(/\,/g, "")
 }
 
 export default (filepath1, filepath2, formatType) => {
