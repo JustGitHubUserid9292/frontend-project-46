@@ -4,24 +4,21 @@
 
 import parser from '../src/parser.js'
 
-import { isNested, nestedFiles, plainFiles } from '../formatters/stylish.js'
+import stylish from '../formatters/stylish.js'
 
 import plainFormatter from '../formatters/plain.js'
 
 import jsonFormatter from '../formatters/json.js'
 
 const genDiff = (data1, data2, formatType = 'stylish') => {
-  const diff = nestedFiles(data1, data2)
+  const diff = stylish(data1, data2)
   if (formatType === 'plain') {
     return plainFormatter(diff)
   }
   if (formatType === 'json') {
     return jsonFormatter(diff)
   }
-  if (isNested(data1, data2)) {
-    return JSON.stringify(diff, null, 4).replace(/\"/g, "").replace(/\,/g, "")
-  }
-  return plainFiles(data1, data2)
+  return JSON.stringify(diff, null, 4).replace(/\"/g, "").replace(/\,/g, "")
 }
 
 export default (filepath1, filepath2, formatType) => {
