@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 /* eslint no-useless-escape: "off" */
 
 import parser from './parser.js'
