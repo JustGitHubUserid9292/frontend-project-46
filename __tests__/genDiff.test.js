@@ -1,6 +1,6 @@
 /* eslint no-undef: "off", curly: "error" */
 
-import genDiff from '../src/genDiff.js';
+import genDiff from '../src/index.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
