@@ -1,6 +1,7 @@
 /* eslint no-useless-escape: "off" */
 /* eslint indent: "off", curly: "error" */
 /* eslint semi: "off", curly: "error" */
+/* eslint quotes: "off", curly: "error" */
 
 import parser from './parser.js'
 
