@@ -2,21 +2,21 @@
 
 import parser from './parser.js'
 
-import stylish from '../formatters/stylish.js'
+import { stylish, stylishToString } from '../formatters/stylish.js'
 
 import plainFormatter from '../formatters/plain.js'
 
 import jsonFormatter from '../formatters/json.js'
 
 const genDiff = (data1, data2, formatType = 'stylish') => {
-  const diff = stylish(data1, data2)
+  const diff = JSON.stringify(stylish(data1, data2), null, 4).replace(/\"/g, "").replace(/\,/g, "")
   if (formatType === 'plain') {
     return plainFormatter(diff)
   }
   if (formatType === 'json') {
     return jsonFormatter(diff)
   }
-  return JSON.stringify(diff, null, 4).replace(/\"/g, "").replace(/\,/g, "")
+  return stylishToString(diff)
 }
 
 export default (filepath1, filepath2, formatType) => {

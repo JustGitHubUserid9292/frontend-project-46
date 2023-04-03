@@ -35,4 +35,15 @@ const sortData = (data) => {
      }, {});
    };
 
-export default stylish;
+   const stylishToString = (str) => {
+    const arr = str.split('\n')
+    .map((elm) => {
+      if (elm.trim().startsWith('+') || elm.trim().startsWith('-')) {
+        elm = elm.slice(2) 
+      }
+      return elm
+    })
+    return arr.join('\n')
+  }
+
+export { stylish, stylishToString };
