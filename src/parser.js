@@ -1,4 +1,4 @@
-/* eslint no-undef: "indent", curly: "error" */
+/* eslint indent: "off", curly: "error" */
 
 import yaml from 'js-yaml';
 import path from 'path';

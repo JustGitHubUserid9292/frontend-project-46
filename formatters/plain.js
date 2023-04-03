@@ -1,4 +1,4 @@
-/* eslint no-undef: "indent", curly: "error" */
+/* eslint indent: "off", curly: "error" */
 
 import _ from 'lodash';
 
