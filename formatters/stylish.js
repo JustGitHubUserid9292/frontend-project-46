@@ -1,5 +1,8 @@
 /* eslint indent: "off", curly: "error" */
 /* eslint semi: "off", curly: "error" */
+/* eslint fp/no-mutation: "off", curly: "error" */
+/* eslint fp/no-mutating-methods: "off", curly: "error" */
+/* eslint eol-last: "off", curly: "error" */
 
 import _ from 'lodash';
 
