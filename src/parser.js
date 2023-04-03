@@ -1,4 +1,5 @@
 /* eslint indent: "off", curly: "error" */
+/* eslint semi: "off", curly: "error" */
 
 import yaml from 'js-yaml';
 import path from 'path';

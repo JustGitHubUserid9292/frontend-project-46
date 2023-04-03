@@ -1,4 +1,5 @@
 /* eslint no-undef: "off", curly: "error" */
+/* eslint semi: "off", curly: "error" */
 
 import genDiff from '../src/index.js';
 import path from 'path';

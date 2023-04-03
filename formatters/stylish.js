@@ -1,5 +1,5 @@
 /* eslint indent: "off", curly: "error" */
-
+/* eslint semi: "off", curly: "error" */
 import _ from 'lodash';
 
 const sortData = (data) => {
