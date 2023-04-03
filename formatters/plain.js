@@ -2,6 +2,10 @@
 /* eslint semi: "off", curly: "error" */
 /* eslint eol-last: "off", curly: "error" */
 /* eslint no-trailing-spaces: "off", curly: "error" */
+/* eslint no-shadow: "off", curly: "error" */
+/* eslint arrow-parens: "off", curly: "error" */
+/* eslint array-callback-return: "off", curly: "error" */
+/* eslint consistent-return: "off", curly: "error" */
 
 import _ from 'lodash';
 

@@ -1,6 +1,7 @@
 /* eslint indent: "off", curly: "error" */
 /* eslint semi: "off", curly: "error" */
 /* eslint eol-last: "off", curly: "error" */
+/* eslint consistent-return: "off", curly: "error" */
 
 import yaml from 'js-yaml';
 import path from 'path';

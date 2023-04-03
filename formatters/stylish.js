@@ -3,6 +3,9 @@
 /* eslint fp/no-mutation: "off", curly: "error" */
 /* eslint fp/no-mutating-methods: "off", curly: "error" */
 /* eslint eol-last: "off", curly: "error" */
+/* eslint no-param-reassign: "off", curly: "error" */
+/* eslint arrow-parens: "off", curly: "error" */
+/* eslint no-trailing-spaces: "off", curly: "error" */
 
 import _ from 'lodash';
 
