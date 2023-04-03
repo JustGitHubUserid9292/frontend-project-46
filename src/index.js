@@ -9,14 +9,14 @@ import plainFormatter from '../formatters/plain.js'
 import jsonFormatter from '../formatters/json.js'
 
 const genDiff = (data1, data2, formatType = 'stylish') => {
-  const diff = JSON.stringify(stylish(data1, data2), null, 4).replace(/\"/g, "").replace(/\,/g, "")
+  const diff = stylish(data1, data2)
   if (formatType === 'plain') {
     return plainFormatter(diff)
   }
   if (formatType === 'json') {
     return jsonFormatter(diff)
   }
-  return stylishToString(diff)
+  return stylishToString(JSON.stringify(diff, null, 4).replace(/\"/g, "").replace(/\,/g, ""))
 }
 
 export default (filepath1, filepath2, formatType) => {
