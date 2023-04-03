@@ -1,4 +1,5 @@
 /* eslint no-useless-escape: "off" */
+/* eslint no-undef: "indent", curly: "error" */
 
 import parser from './parser.js'
 

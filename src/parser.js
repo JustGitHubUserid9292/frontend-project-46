@@ -1,3 +1,5 @@
+/* eslint no-undef: "indent", curly: "error" */
+
 import yaml from 'js-yaml';
 import path from 'path';
 import { readFileSync } from 'fs';

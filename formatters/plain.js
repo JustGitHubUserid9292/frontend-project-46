@@ -1,3 +1,5 @@
+/* eslint no-undef: "indent", curly: "error" */
+
 import _ from 'lodash';
 
 const formatValue = (value) => {
