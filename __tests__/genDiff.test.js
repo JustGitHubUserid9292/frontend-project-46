@@ -2,8 +2,8 @@
 /* eslint semi: "off", curly: "error" */
 /* eslint quotes: "off", curly: "error" */
 /* eslint no-multiple-empty-lines: "off", curly: "error" */
-/* eslint import/order: "off", curly: "error" */
-/* eslint import/no-duplicates: "off", curly: "error" */
+/* eslint order: "off", curly: "error" */
+/* eslint no-duplicates: "off", curly: "error" */
 
 import genDiff from '../src/index.js';
 import path from 'path';

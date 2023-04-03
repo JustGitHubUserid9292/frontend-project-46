@@ -23,7 +23,6 @@
   "dependencies": {
     "commander": "^10.0.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5",
     "fs": "^0.0.1-security",
     "jest": "^29.5.0",
     "js-yaml": "^4.1.0",
@@ -32,6 +31,8 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
-    "eslint": "^8.36.0"
+    "eslint": "^8.36.0",
+    "eslint-plugin-functional": "^5.0.7",
+    "eslint-plugin-import": "^2.27.5"
   }
 }
